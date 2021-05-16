@@ -61,7 +61,7 @@ Thing mqtt:topic:tasmota:tasmota_TH "Light_TH" (mqtt:broker:myMQTTBroker) {
         Type switch : Reachable    [stateTopic="tele/tasmota_TH/LWT",     transformationPattern="MAP:tasmota-reachable.map"]
 
         // Diagnostics: Define specific for what you really need on a regular basis, use standalone MQTT client for troubleshooting
-        Type string : RestartReason [stateTopic="tele/tasmota_TH/INFO3", transformationPattern="JSONPATH:$.RestartReason"]
+        Type string : RestartReason [stateTopic="tele/tasmota_TH/INFO3", transformationPattern="JSONPATH:$.Info3.RestartReason"]
         // old one, have to query it
         Type string : Version2      [stateTopic="stat/tasmota_TH/STATUS2", transformationPattern="JSONPATH:$.StatusFWR.Version"]
         // new one - comes for free at startup
